@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+}
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px; 
+    box-shadow: 0px 3px 4px -2px rgb(184, 184, 184);
+}
+
+.logo {
+    width: 130px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu--direita {
+    margin: 0 5px;
+}
+
+.menu--direita li {
+    margin: 0 10px;
+}
+
+.botao {
+    background-color: blueviolet;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto {
+    margin-left: 200px;
+    width: 550px;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 35px;
+}
+
+.paragrafo {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.botao--rosa {
+    background-color: rgb(216, 0, 108);
+    margin-right: 10px;
+}
+
+.botao--transparente {
+    background-color: transparent;
+    margin-right: 10px;
+    color: rgb(124, 123, 123);
+}
+
+.botao_play {
+    margin-left: 5px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        
+}
+
+.titulo--menor {
+    margin: 40px auto;
+    font-weight: normal;
+    font-size: 25px;
+    color: rgb(124, 123, 123);
+}
+
+.depoimentos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1480px;
+    margin-bottom: 25px;
+}
+
+.depoimentos__alunas {
+    width: 240px;
+    margin: 10px 0px 0px 0px;
+    
+}
+
+.universidade {
+    font-size: 22px;
+    border-bottom: 3px solid blueviolet;
+    
+}
+
+.frase {
+    font-size: 15px;
+    margin-top: 15px;
+    
+}
+
+.nome {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+.cargo {
+    font-size: 15px;
+    margin-top: -3px;
+}
+
+.rodape {
+    background-color:  rgb(216, 0, 108);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffff;
+    font-size: 15px;
+    padding: 5px 0;
+}
