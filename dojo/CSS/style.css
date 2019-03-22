@@ -13,6 +13,9 @@ body {
     justify-content: space-between;
     padding: 20px 100px; 
     box-shadow: 0px 3px 4px -2px rgb(184, 184, 184);
+    position: fixed;
+    background-color: #ffff;
+    width: 90vw;
 }
 
 .logo {
@@ -39,7 +42,7 @@ body {
     margin: 0 10px;
 }
 
-.botao {
+.btn {
     background-color: blueviolet;
     border: none;
     padding: 10px 15px;
@@ -47,6 +50,7 @@ body {
     color: white;
     font-family: 'Hind', sans-serif;
     font-size: 18px;
+    cursor: pointer;
 
 }
 
@@ -58,7 +62,7 @@ body {
 
 .texto {
     margin-left: 200px;
-    width: 550px;
+    width: 40%;
 }
 
 .titulo {
@@ -72,18 +76,18 @@ body {
     margin-bottom: 10px;
 }
 
-.botao--rosa {
+.btn--rosa {
     background-color: rgb(216, 0, 108);
     margin-right: 10px;
 }
 
-.botao--transparente {
+.btn--transparente {
     background-color: transparent;
     margin-right: 10px;
     color: rgb(124, 123, 123);
 }
 
-.botao_play {
+.btn_play {
     margin-left: 5px;
 }
 
@@ -140,7 +144,7 @@ body {
 }
 
 .rodape {
-    background-color:  rgb(216, 0, 108);
+    background-color: rgb(216, 0, 108);
     bottom: 0;
     width: 100%;
     text-align: center;
