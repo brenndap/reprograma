@@ -63,5 +63,16 @@
     color: #fff;
     font-weight: bold;
     margin-left: 10px;
+
+}
+
+.btn--purple:hover { /*pseudo seletor*/
+    background-color: #3a006d;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+    border: 1px solid #9013fe;
 }
 
