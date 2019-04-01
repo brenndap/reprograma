@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+
+</head>
+<body>
+
+    <nav class="navegacao">
+        <ul class="menu"> <!--Colocar os links das sections no menu
+        colocar container pra conter a ul na nav-->
+            <li>Sobre</li>
+            <li>Destinos</li>
+            <li>Contato</li>
+        </ul>
+    </nav>
+
+    <!--Colocar o main aqui-->
+    <header class="cabecalho">
+        <div class="cabecalho_conteudo">
+            <h1>Mundo gelado</h1>
+            <p>A agência de viagens que te leva aos lugares mais congelantes do planeta.</p>
+            <button>Quero saber mais</button>
+        </div>
+    </header>
+
+    <!--Colocar os ids nas sections-->
+    <section class="sobre">
+        
+        <h1>A agência Mundo Gelado</h1>
+        <p >Nosso diferencial é te levar para conhecer as mais lindas e geladas paisagens no nosso planeta, com conforto e segurança. Nossos pacotes são completos e oferecem uma experiência inesquecível para você. Veja abaixo nossos destinos disponíveis, e se tiver alguma dúvida ou sugestão, entre em contato com a gente.</p>
+        
+    </section>
+
+    <section class="destinos">
+        
+        <!--Criar um container aqui por causa da responsividade-->
+        
+        <div class="siberia">
+            <div class="destinos_ilustracao">
+                <img class="destinos_img" src="./img/siberia-1.jpg" alt="">
+            </div>
+       
+
+            <div class="destinos_conteudo">
+                <h4>Siberia</h4>
+                <p>O clima varia entre o clima polar e o clima continental. Na Sibéria situa-se o local habitado mais frio do mundo, a aldeia de Oymyakon.</p>
+            </div>
+        </div>
+        
+        <div class="mosaico">
+            
+            <div class="mosaico_container"> <!--tirar imagem da div-->
+                <div class="mosaico_ilustracao">
+                    <img class="mosaico_img" src="./img/groenlandia-1.jpg" alt="">
+                </div>
+
+                <div class="mosaico_conteudo">
+                    <h2>Groenlândia</h2> <!--titulos em uma div-->
+                    <p >A Groenlândia é a maior ilha do mundo e tem mais de 44 000 km de linha de costa. A população é escassa, confinada a pequenos povoados na costa. A ilha tem a segunda maior reserva de gelo do mundo, apenas ultrapassada pela Antártida.</p>
+                </div>
+            </div>
+        
+            <div class="mosaico_container">
+                <div class="mosaico_conteudo">
+                    <h2>Antártida</h2>
+                    <p class="mosaico-texto" >É o continente mais frio, mais seco, com a maior média de altitude e de maior índice de ventos fortes do planeta.[1] A temperatura mais baixa da Terra (-89,2 °C) foi registrada na Antártica, sendo a temperatura média na costa, durante o verão, de -10 °C; no interior do continente, é de -40 °C</p>
+                </div>
+                <div class="mosaico_ilustracao">
+                    <img class="mosaico_img" src="./img/antartida-1.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        
+    </section >
+
+    <section class="contato">
+        
+        <div class="mapa">
+            <img src="" alt="">
+            <h2>Aonde estamos</h2> 
+        </div>
+
+        
+        <form class="formulario" action="">
+
+            <h3>Fale com a gente</h3>
+    
+            <div class="field_group">
+                <label for="username">Nome completo</label> 
+                <input type="text" name="username">
+            </div>
+
+            <div class="field_group" >
+                <label for="user-email">Email</label>
+                <input type="email" name="user-email">
+            </div>
+
+            <div class="field_group">
+                <label for="user-number">Telefone</label>
+                <input type="tel" name="user-number">
+
+            </div>
+
+            <div class="field_group">
+                <label for="messager">Mensagem</label>
+                <textarea name="messager" cols="30" rows="10"></textarea>
+            </div>
+            
+            <input class="btn-formulario" type="submit" value="Enviar">
+                                
+        </form>
+    </section>
+
+    <footer class="rodape">
+
+        <p>Telefone: (11) 1234-5678</p>
+
+        <div class="redes_sociais">
+            <a href="">
+                <img src="./img/twitter.png" alt="Ícone do Twitter">
+            </a>
+            <a href="">
+                <img src="./img/facebook.png" alt="Ícone do Facebook">
+            </a>
+            <a href="">
+                <img src="./img/youtube.png" alt="Ícone do YouTube">
+            </a>
+        </div>
+        <div class="creditos">
+            <p>Copyright © Agência Mundo gelado 2018</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

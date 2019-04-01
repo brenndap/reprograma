@@ -27,7 +27,7 @@
     margin: 10px;
 }
 
-.btn-menu {
+.btn_menu {
     background-color: transparent;
     border: 1px solid #daa520;
     border-radius: 5px;
@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.site_header {
+.header_section {
     background-image: url("../img/bg-banner.png");
     min-height: 80vh;
     padding-top: 200px;
@@ -55,12 +55,12 @@
     text-align: center;
 }
 
-.site_header > h1 {
+.header_section > h1 {
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.btn-header {
+.btn_header {
     text-decoration: none;
     background-color: #fedd6a;
     color: #745813;
@@ -71,18 +71,18 @@
     margin-top: 30px;
 }
 
-.section_1 {
+.about_section {
     display: flex;
     align-items: center;
     flex-direction: column;
 
 }
 
-.section_1 > h2 {
+.about_section > h2 {
     font-weight: normal;
 }
 
-.about {
+.about_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,7 +108,7 @@
     margin: 15px 20px;
 }
 
-.benefits {
+.about_benefits {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,7 +116,7 @@
     margin-bottom: 40px;
 }
 
-.benefits--steps {
+.about_benefits--details {
     flex-direction: column;
     width: 450px;
     font-size: 16px;
@@ -124,69 +124,172 @@
     margin-right: 40px;
 }
 
-.bold-text {
+.bold_text {
     font-weight: bold;
 }
 
-.benefits--steps > p {
+.about_benefits--details > p {
     text-align: center;
     margin-top: 20px;
 }
 
-.section_2 {
+.services_section {
     background-image: url("../img/bg-servicos.png");
     background-size: cover;
-    
     display: flex;
     align-items: center;
     flex-direction: column;
     
 }
 
-.section_2 > h2 {
+.services_section > h2 {
     font-weight: normal;
     text-transform: capitalize;
     margin-top: 50px;
 }
 
-.services {
+.services_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 30px;
+    
 }
 
-.services--content {
+.services_content {
     background-color: #2bc1d1;
     border-radius: 5px;
+    display: flex;
     flex-direction: column;
     width: 400px;
     height: 450px;
     color: #fff;
     margin: 0 10px 50px 10px;
+    position: relative;
     
 }
 
-.services--content > h2 {
-    margin-top: 30px;
+.services_content > h2 {
+    margin-top: 80px;
+    text-align: center;
     
 }
 
-.text_content {
+.services_details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.services_text {
     text-align: center;
     width: 320px;
     height: 110px;
 }
 
-.content_img {
+.services_img {
     width: 150px;
     height: 110px;
     margin-bottom: 20px;
 }
 
-.content {
+.btn_services {
+    position: absolute;
+    background-color: #fedd6a;
+    color: #745813;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    top: 430px;
+    left: 130px;
+
+}
+
+.data_section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 40px;
+    background-image: url("../img/bg-numeros.png");
+    background-size: cover;
+}
+
+.data_section > h2 {
+    color: #fff;
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+.data_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+
+.data_group {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.data_group > p {
+    width: 220px;
+    text-align: center;
+}
+
+.data_group > h2 {
+    color: #fedd6a;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.form_section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form_section > h2 {
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+.form_container {
+    margin-top: 35px;
+}
+
+.field_container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+
+
+.field_container > input, 
+.field_container > textarea {
+    width: 502px;
+    background-color: #f3f394;
+    border: none;
+}
+
+.field_container > input {
+    height: 30px;
+}
+
+.btn_submit {
+    background-color: #1a8cff;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    padding: 11px 220px;
+    margin: 5px auto;
+    font-size: 17px;
 }
