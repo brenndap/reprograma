@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*  ----------------- Navegação -------------- */
+
+.navegacao {
+    background-color: #a0bed0;
+    padding: 40px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0,0,0,.2);
+}
+
+.navegacao__menu {
+    text-align: right;
+    padding-right: 150px;
+
+}
+
+.navegacao__menu li {
+    list-style: none;
+    display: inline;
+    color: #fff;
+    padding: 20px;
+}
+
+/* ----------------------- Cabeçalho --------------- */
+
+.cabecalho {
+    background-image: url("../img/foto-banner.jpg");
+    min-height: 80vh;
+    padding-top: 12.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 80px auto;
+    margin-bottom: 0;
+}
+
+.cabecalho__conteudo h1 {
+    font-size: 105px;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+.cabecalho__conteudo p {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cabecalho__btn {
+    border: none;
+    padding: 20px;
+    width: 200px;
+    background: #979797;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 70px auto;
+    
+}
+
+/* --------------- Sobre ----------------- */
+
+.sobre {
+    width: 100%;
+    background: #161615;
+    padding-top: 70px;
+}
+
+.sobre__conteudo {
+    width: 35%;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.sobre__conteudo p {
+    margin-top: 20px;
+    line-height: 1.9;
+}
+
+/* ------------------ DESTINOS --------------- */
+
+
+.destinos {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 100px;
+ 
+}
+
+.siberia {
+    width: 100%;
+    display: inline-block; /*display flex*/
+    margin: 0 auto;
+}
+
+.destinos_img {
+    width: 100%;
+}
+
+.destinos_conteudo {
+    display: inline-block;
+    width: 300px;
+    vertical-align: middle;
+}
+
+.destinos_ilustracao {
+    display: inline-block;
+    width: 695px;
+    vertical-align: middle;
+}
+
+.mosaico {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #161615;
+    margin-top: 80px;
+  
+    
+}
+
+.mosaico_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mosaico_ilustracao {
+    width: 50%;
+    display: block;   
+
+}
+
+.mosaico_img {
+    width: 100%;
+    display: block;
+     
+}
+
+.mosaico_conteudo {
+    width: 50%;
+    background-color:#161615;
+    color: #fff;
+    padding: 118px 50px 125px 50px;  
+
+}
+
+.mosaico_conteudo > h2 {
+    font-family: 'Varela Round', sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.mosaico_conteudo > p {
+    font-size: 14px;
+    
+}
+
+.contato {
+    margin: 10px auto;
+    width: 60%;
+}
+
+.formulario {
+    margin: 30px auto;
+    width: 100%;
+}
+
+.formulario > h3 {
+    text-align: center;
+    margin: 30px auto;
+}
+
+
+.field_group {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    
+}
+
+.field_group > input, 
+.field_group > textarea {
+    width: 100%;
+    
+}
+
+.btn-formulario {
+    display: block;
+    margin: 20px auto;
+}
+

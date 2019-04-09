@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="form_body">
+    <section>
+        <form class="form_container" action="#" method="POST">
+         
+            <div class="field_group">
+                <label for="user-text">Texto</label> 
+                <input type="text" name="user-text">
+            </div>
+
+            <div class="field_group">
+                <label for="user-password" class="label">Senha</label>
+                <input type="password" name="user-password">
+            </div>
+
+            <div class="field_group">
+                <label for="user-confirmation">Confirme que você é uma mulher cheia de talentos</label>
+                
+                <div class="options_group">
+                    <input type="checkbox" name="user-confirmation" value="confirm">
+                    <span>Confirmo que sou mesmo</span>
+                </div>
+            </div>
+
+            <div class="field_group">
+                <label for="user-option">Escolha uma opção</label>
+                <div class="options_group">
+                    <input type="radio" name="user-option" value="super-força"><span>Super força</span>                 
+                    <input type="radio" name="user-option" value="ser-invisivel"><span>Ser invisivel</span>                               
+                    <input type="radio" name="user-option" value="ler-mentes"><span>Ler mentes</span>                                
+                    <input type="radio" name="user-option" value="super-velocidade"><span>Super velocidade</span>
+                </div>
+            </div>
+
+            <div class="field_group">
+                <label for="user-topics">Selecione um topico</label>
+                <select name="user-topics">
+                    <option value="deixar-meu-site-mais-bonito">Deixar meu site mais bonito</option>
+                    <option value="acabar-com-o-patriarcado">Acabar com o patriarcado</option>
+                    <option value="fazer-a-revolucao-feminista">Fazer a revolução feminista</option>
+                </select>
+            </div>
+
+            <div class="field_group">
+                <label for="user-number">Escolha um valor</label>
+                <input type="number" name="user-number">
+
+            </div>
+
+            <div class="field_group">
+                <label for="user-text-2">Comentário</label>
+                <textarea name="user-text-2" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="field_group">
+                <div></div> <!--div em branco-->
+                <div class="options_group">
+                    <input class="btn" type="reset" value="Reset">
+                    <input class="btn btn--purple" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
+
