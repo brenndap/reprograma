@@ -1,0 +1,64 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
+    <title>IMC Empoderado</title>
+</head>
+<body>
+    <section class="content">
+        <div id="table" class="col">
+            <table>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="linha1">
+                        <td>Abaixo de 18.5</td>
+                        <td>Uma deusa!🎵</td>
+                    </tr>
+                    <tr class="linha2">
+                        <td>18,5 - 24.9</td>
+                        <td>Uma louca!🎵</td>
+                    </tr>
+                    <tr class="linha3">
+                        <td>24.9 - 29.9</td>
+                        <td>Uma feiticeira!🎵</td>
+                    </tr>
+                    <tr class="linha4">
+                        <td>29.9 - 40</td>
+                        <td>Ela é demais!🎵</td>
+                    </tr>
+                    <tr class="linha5">
+                        <td>Acima de 40</td>
+                        <td>Meu deus, ela é demais!🎵</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div id="calc" class="col">
+            <label for="">Peso (Kg)</label>
+            <input id="peso" type="text">
+            <label for="">Altura</label>
+            <input id="altura" type="text">
+            <button onclick=calculaIMC()>Calcular</button>
+        </div>
+        <div class="col">
+            <p>Seu IMC é: </p>
+            <p id="resultado"></p>
+            <div id="gif-content" class="gif"></div>
+            
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+

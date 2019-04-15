@@ -1,0 +1,71 @@
+body {
+    font-family: sans-serif;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+
+   
+}
+.col {
+    width: 21%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+th {
+    background: rgb(128, 128, 128);
+    color: rgb(0, 0, 0);
+}
+
+td, th {
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.linha1{padding:10px; background: rgb(0, 0, 255);}
+.linha2{padding:10px; background: rgb(0, 128, 0);}
+.linha3{padding:10px; background: rgb(255, 255, 0);}
+.linha4{padding:10px; background: rgb(255, 0, 0);}
+.linha5{padding:10px; background: rgb(128, 0, 128);}
+
+label, input, p {
+    margin: 8px 0;
+
+}
+
+input{
+    border: solid 1px #ccc;
+    width: 100%;
+    height: 15%;
+}
+
+button {
+    padding: 12px 10px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    background-color: purple;
+    width: 100%;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.gif {
+    width: 100%;
+}
+
+.gif > img {
+    width: 300px
+}
