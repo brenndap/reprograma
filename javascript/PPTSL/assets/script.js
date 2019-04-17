@@ -21,18 +21,29 @@ window.addEventListener('DOMContentLoaded', function() {
         let computer = gameOptions[Math.floor(Math.random() * gameOptions.length)];
         let img = document.createElement("img");
         let game = [];
-        game["pedra"] = [["lagarto", "tesoura"], ["papel", "spock"]];
-        game["papel"] = [["pedra", "spock"], ["lagarto", "tesoura"]];
-        game["tesoura"] = [["papel", "lagarto"], ["pedra", "spock"]];
-        game["lagarto"] = [["papel", "spock"], ["pedra", "tesoura"]];
-        game["spock"] = [["pedra", "tesoura"], ["lagarto", "papel"]];
+        game["pedra"] = []
+        game["pedra"]["wins"] = ["lagarto", "tesoura"];
+        game["pedra"]["loses"] = ["papel", "spock"];
+        game["papel"] = [];
+        game["papel"]["wins"] = ["pedra", "spock"];
+        game["papel"]["loses"] = ["lagarto", "tesoura"];
+        game["tesoura"] = [];
+        game["tesoura"]["wins"] = ["papel", "lagarto"];
+        game["tesoura"]["loses"] = ["pedra", "spock"];
+        game["lagarto"] = [];
+        game["lagarto"]["wins"] = ["papel", "spock"];
+        game["lagarto"]["loses"] = ["pedra", "tesoura"];
+        game["spock"] = [];
+        game["spock"]["wins"] = ["pedra", "tesoura"];
+        game["spock"]["loses"] = ["lagarto", "papel"];
+
 
         if(computer == user.value){
             result.innerHTML = `Empate! Joque novamente! </br>`;
             img.src = "https://media.giphy.com/media/l4Ep4U19zwmUfWH72/giphy.gif";
             result.appendChild(img);
            
-        } else if (game[computer][0].includes(user.value)) { 
+        } else if (game[computer]["wins"].includes(user.value)) { 
             result.innerHTML = `${name.value} você perdeu! O computador escolheu ${computer} </br>`;
             img.src = "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif";
             result.appendChild(img);
@@ -47,3 +58,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
+
+//game["pedra"] = [["lagarto", "tesoura"], ["papel", "spock"]];
+//game["papel"] = [["pedra", "spock"], ["lagarto", "tesoura"]];
+//game["tesoura"] = [["papel", "lagarto"], ["pedra", "spock"]];
+//game["lagarto"] = [["papel", "spock"], ["pedra", "tesoura"]];
+//game["spock"] = [["pedra", "tesoura"], ["lagarto", "papel"]];
