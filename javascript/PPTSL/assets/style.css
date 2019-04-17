@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+}
+
+img {
+    width: 500px;
+}
+
+p {
+    text-transform: uppercase;
+}
+
+.game_content {
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.username {
+    font-weight: bold;
+    width: 37%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.user-submit {
+    text-transform: uppercase;
+    width: 80px;
+    padding: 12px 20px;
+    color: #ffffff;
+    border: none;
+    background-color: rgb(26, 19, 19);
+}
+
+.user-input {
+    padding: 10px;
+    width: 315px;
+}
+
+.game {
+    display: none;
+    font-weight: bold;
+    width: 37%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.result {
+    font-size: 25px;
+    margin-top: 40px;
+
+
+}
+
+.result img {
+    margin-top: 30px;
+}
