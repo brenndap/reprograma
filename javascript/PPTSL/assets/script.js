@@ -59,9 +59,3 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-//game["pedra"] = [["lagarto", "tesoura"], ["papel", "spock"]];
-//game["papel"] = [["pedra", "spock"], ["lagarto", "tesoura"]];
-//game["tesoura"] = [["papel", "lagarto"], ["pedra", "spock"]];
-//game["lagarto"] = [["papel", "spock"], ["pedra", "tesoura"]];
-//game["spock"] = [["pedra", "tesoura"], ["lagarto", "papel"]];
