@@ -54,7 +54,7 @@ h2, input {
 }
 
 
-.resultado {
+.result {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -64,7 +64,7 @@ h2, input {
 
 }
 
-.resultado img {
+.result img {
     width: 100%;
     margin-bottom: 40px;
 
