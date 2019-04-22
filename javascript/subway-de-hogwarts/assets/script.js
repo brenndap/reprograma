@@ -1,5 +1,14 @@
 window.addEventListener('DOMContentLoaded', function () {
     const houseOptions = [];
+    /*
+    Não sei se você já viu, mas talvez inserir as casas em Objetos deixe o código mais fácil de navegar. O que eu pensei foi fazer um objeto pra cada casa, como o exemplo abaixo:
+
+    grifinoriaHouse = {
+        items: ["frances", "suico", "rosbife", "mostarda", "tostado"],
+        score: 0,
+        gif: 'https://media.giphy.com/media/40KXzKllSl6ve/giphy.gif'
+    }
+    */
     houseOptions["Grifinória"] = [];
     houseOptions["Grifinória"]["items"] = ["frances", "suico", "rosbife", "mostarda", "tostado"];
     houseOptions["Grifinória"]["score"] = 0;
@@ -29,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function getRadioValue(radioGroup){
         for(let i = 0; i < radioGroup.length; i++ ){
             if(radioGroup[i].checked){
+                /* return não é necessário aqui. Usamos o return quando precisamos usar o valor que a função cria, em outro lugar */
                 return itemsList.push(radioGroup[i].value);
             }
         }
@@ -56,13 +66,14 @@ window.addEventListener('DOMContentLoaded', function () {
         });
         for(let key in houseOptions){
             if(houseOptions[key]["score"] == maxScore){
+                /* aqui é um bom exemplo do uso do return! O valor que o getMaxScoreHouse() gera é usado e guardado na variável let winnerHouse, por isso o return aqui é necessário */
                 return key;
             }
         };
     }
     
     submit.addEventListener("click", function(){
-
+        /* talvez exista uma maneira de reduzir e otimizar essa parte do getRadioValue */
         getRadioValue(bread);
         getRadioValue(cheese);
         getRadioValue(protein);
@@ -73,8 +84,6 @@ window.addEventListener('DOMContentLoaded', function () {
         finalResult.innerHTML = winnerHouse;
         img.src = houseOptions[winnerHouse]["gif"];
         finalResult.append(img);
-   
-
     });
 
 });
