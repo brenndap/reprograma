@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hogwarts {
+    width: 100%;
+   
+}
+
+h1 {
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+    font-size: 34px;
+}
+
+h2, input {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.input-container {
+    text-align: left;
+}
+
+.btn {
+    margin: 30px auto;
+    font-weight: bold;
+    background: rgb(7, 7, 7);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #EEEEEE;
+    border-bottom: solid 8px rgba(7, 7, 7, 0.794);
+    text-transform: uppercase;
+    transition: all 100ms ease;
+}
+
+.btn:active {
+    background:  rgb(228, 106, 49);
+    cursor: pointer;
+    border-bottom: solid 3px rgba(7, 7, 7, 0.835);
+}
+    
+.btn:hover {
+    background:  rgba(7, 7, 7, 0.835);
+    cursor: pointer;
+}
+
+
+.resultado {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+    font-size: 34px;
+
+}
+
+.resultado img {
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+

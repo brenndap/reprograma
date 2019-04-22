@@ -1,0 +1,73 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
+    <title>Subway de Hogwarts</title>
+</head>
+<body>
+    <section class="container">
+        <img class="hogwarts" src="./assets/hogwarts.jpg" alt="Imagem do castelo de Hogwarts.">
+        <h1>Bem-vindo a Hogwarts!</br>
+            Monte um sanduíche e revelaremos de qual casa você é</h1>
+        <div class="input-container">
+            <h2>Escolha um tipo pão:</h2>
+            
+            <fieldset >
+                <input type="radio" name="pao" value="frances">Francês<br>
+                <input type="radio" name="pao"value="italiano">Italiano<br>
+                <input type="radio" name="pao"value="integral">Integral<br>
+                <input type="radio" name="pao"value="granola">Granola Salgada<br>
+            </fieldset>
+          
+        </div>
+        <div class="input-container">
+            <h2>Escolha um tipo de queijo:</h2>
+            
+            <fieldset >
+                <input type="radio" name="queijo" value="suico">Suíço<br>
+                <input type="radio" name="queijo" value="mussarela">Mussarela<br>
+                <input type="radio" name="queijo" value="cheddar">Cheddar<br>
+                <input type="radio" name="queijo" value="vegano">Queijo vegano<br>
+            </fieldset>
+            
+        </div>
+        <div class="input-container">
+            <h2>Escolha um tipo de proteína:</h2>
+            
+            <fieldset >
+                <input type="radio" name="proteina" value="rosbife">Rosbife</br>
+                <input type="radio" name="proteina" value="presunto">Presunto</br>
+                <input type="radio" name="proteina" value="jaca">Carne de Jaca</br>
+                <input type="radio" name="proteina" value="atum">Atum<br>
+            </fieldset>
+           
+        </div>
+        <div class="input-container">
+            <h2>Escolha um tipo de molho:</h2>
+           
+            <fieldset >
+                <input type="radio" name="molho" value="mostarda">Mostarda e mel</br>
+                <input type="radio" name="molho" value="maionese">Maionese</br>
+                <input type="radio" name="molho" value="barbecue">Barbecue</br>
+                <input type="radio" name="molho" value="parmesao">Parmesão</br>
+            </fieldset>
+         
+        </div>
+        <div class="input-container">
+            <h2>Como você quer seu sanduíche:</h2>
+           
+            <fieldset >
+                <input type="radio" name="tipo" value="tostado">Tostado</br>
+                <input type="radio" name="tipo" value="frio">Frio</br>
+            </fieldset>
+ 
+        </div>
+        <input class="btn" id="submit" type="submit" value="Descubra sua casa">
+        <div id="resultado" class="resultado"></div>
+    </section>
+</body>
+</html>
