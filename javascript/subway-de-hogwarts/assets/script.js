@@ -29,7 +29,6 @@ window.addEventListener('DOMContentLoaded', function () {
     
     function getRadioValue(radioGroup) {
         for (let i = 0; i < radioGroup.length; i++) {
-            console.log(radioGroup.length);
             if (radioGroup[i].checked) {
                 itemsList.push(radioGroup[i].value);
             }
@@ -39,12 +38,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function score(itemsList) {
 
-        for (let i = 0; i < houses.length; i++) {
-            let a = houses[i].items;
-            if (a.includes(itemsList[i])) {
-                houses[i].addScore();
-                console.log(houses[i])
+        for (let i = 0; i < itemsList.length; i++) {
+            for(key in houses){
+                if (houses[key].items.includes(itemsList[i])) {
+                    houses[key].addScore();
+                    console.log(houses[key].name)
+                    console.log(houses[key].score)
+                    console.log(houses)
+                }
             }
+            
         };
 
 
@@ -55,11 +58,14 @@ window.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < houses.length; i++) {
             scoreList.push(houses[i].score);
         }
-        console.log(scoreList);
+        
         let maxScore = scoreList.reduce(function (a, b) { return Math.max(a, b); });
+
         for (let i = 0; i < houses.length; i++) {
             if (houses[i].score == maxScore) {
+                console.log(houses[i].name)
                 return houses[i].name;
+                
             }
         };
         
@@ -74,7 +80,6 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     submit.addEventListener("click", function () {
-        
         getRadioValue(bread);
         getRadioValue(cheese);
         getRadioValue(protein);
@@ -84,8 +89,8 @@ window.addEventListener('DOMContentLoaded', function () {
         finalResult.innerHTML = getMaxScoreHouse();
         img.src = setGif();
         finalResult.append(img);
+        console.log(itemsList);
     });
-
 });
 
 
