@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-    class createHouse {
+    class House {
         constructor(name, items, score, gif) {
             this.name = name;
             this.items = items;
@@ -11,10 +11,10 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
     const houses = [
-        new createHouse("Grifinória", ["frances", "suico", "rosbife", "mostarda", "tostado"], 0, 'https://media.giphy.com/media/40KXzKllSl6ve/giphy.gif'),
-        new createHouse("Sonserina", ["italiano", "mussarela", "presunto", "maionese", "frio"], 0, 'https://media.giphy.com/media/4E1Yw7cA5DYwU/giphy.gif'),
-        new createHouse("Lufa-Lufa", ["integral", "cheddar", "jaca", "barbecue", "tostado"], 0, 'https://media.giphy.com/media/1UAIoVWRhtjhe/giphy.gif'),
-        new createHouse("Corvinal", ["granola", "vegano", "atum", "parmesao", "frio"], 0, 'https://media.giphy.com/media/BxYmEq7Ksqlbi/giphy.gif')
+        new House("Grifinória", ["frances", "suico", "rosbife", "mostarda", "tostado"], 0, 'https://media.giphy.com/media/40KXzKllSl6ve/giphy.gif'),
+        new House("Sonserina", ["italiano", "mussarela", "presunto", "maionese", "frio"], 0, 'https://media.giphy.com/media/4E1Yw7cA5DYwU/giphy.gif'),
+        new House("Lufa-Lufa", ["integral", "cheddar", "jaca", "barbecue", "tostado"], 0, 'https://media.giphy.com/media/1UAIoVWRhtjhe/giphy.gif'),
+        new House("Corvinal", ["granola", "vegano", "atum", "parmesao", "frio"], 0, 'https://media.giphy.com/media/BxYmEq7Ksqlbi/giphy.gif')
     ]
 
     const submit = document.getElementById('submit');
