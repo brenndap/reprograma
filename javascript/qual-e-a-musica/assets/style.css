@@ -1,0 +1,62 @@
+body {
+    background-image: url(./background.jpg);
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 90px;
+    color: rgb(8, 8, 8);
+    font-weight: normal;
+    text-shadow: 2px 2px #fff;
+}
+
+.container {
+    width: 60%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.tips {
+    margin: 50px auto;
+    width: 700px;
+    text-align: center;
+}
+
+.tips img {
+    width: 100%;
+}
+
+
+
+.result {
+    display: none;
+    margin-top: 50px;
+    font-size: 80px;
+    font-weight: bold;
+    text-shadow: 2px 2px #fff;
+}
+
+.btn {
+    font-family: sans-serif;
+    font-weight: bold;
+    background: rgb(228, 106, 49);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 40px;
+    color: #EEEEEE;
+    border-bottom: solid 8px #aa4603;
+    text-transform: uppercase;
+    transition: all 100ms ease;
+}
+
+.btn:active {
+    background:  rgb(228, 106, 49);
+    cursor: pointer;
+    border-bottom: solid 3px rgb(228, 106, 49);
+}
+    
+.btn:hover {
+    background:  rgb(247, 141, 92);
+    cursor: pointer;
+}

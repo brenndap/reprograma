@@ -4,12 +4,15 @@ window.addEventListener('DOMContentLoaded', function() {
     let resposta = document.getElementById("resposta");
     let cidade = document.getElementById("cidade");
     let respostaBrasil = document.getElementById("resposta-brasil");
-    
-
+    let conteudoBrasil = document.getElementById("conteudo-brasil");
+  
     pais.addEventListener("change", function(){
+        conteudoBrasil.style.display = "none";
+        respostaBrasil.innerHTML = "";
         if (pais.value == "bra"){
+            cidade.value = "";
             resposta.innerHTML = "";
-            document.getElementById("conteudo-brasil").setAttribute("style", "display: block;");
+            conteudoBrasil.style.display = "block";
             cidade.addEventListener("change", function(){
                 if(cidade.value == "bel"){
                     respostaBrasil.innerHTML = "🍫 Feliz Páscoa, maninho! 🍫";
@@ -22,28 +25,17 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             })
         } else if(pais.value == "eng"){
-            document.getElementById("conteudo-brasil").setAttribute("style", "display: none;");
             resposta.innerHTML = "🍫 Happy Easter! 🍫";
-            cidade.value = "";
-            respostaBrasil.innerHTML = "";
+            
         } else if(pais.value == "ale"){
-            document.getElementById("conteudo-brasil").setAttribute("style", "display: none;");
             resposta.innerHTML = "🍫 Guten Ostern 🍫";
-            cidade.value = "";
-            respostaBrasil.innerHTML = "";
+           
         } else if(pais.value == "fra"){
-            document.getElementById("conteudo-brasil").setAttribute("style", "display: none;");
             resposta.innerHTML = "🍫 Joyeuses Pâques! 🍫";
-            cidade.value = "";
-            respostaBrasil.innerHTML = "";
+            
         } else {
-            document.getElementById("conteudo-brasil").setAttribute("style", "display: none;");
             resposta.innerHTML = "";
-            cidade.value = "";
-            respostaBrasil.innerHTML = "";
         }
     })
-        
-    
 });
 

@@ -22,7 +22,8 @@ function calculadora() {
         return alert("O resultado é " + resultado);
     }
     else {
-        return alert("Operador inválido!")
+        alert("Operador inválido, tente novamente!")
+        return calculadora()
         
 
     }
