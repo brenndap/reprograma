@@ -28,12 +28,13 @@ window.addEventListener('DOMContentLoaded', function () {
     let itemsList = [];
     
     function getRadioValue(radioGroup) {
-        for (let i = 0; i < radioGroup.length; i++) {
-            if (radioGroup[i].checked) {
-                itemsList.push(radioGroup[i].value);
+        for(let i = 0; i < arguments.length; i++){
+            for (let i = 0; i < radioGroup.length; i++) {
+                if (radioGroup[i].checked) {
+                    itemsList.push(radioGroup[i].value);
+                }
             }
         }
-
     };
 
     function score(itemsList) {
@@ -80,11 +81,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     submit.addEventListener("click", function () {
-        getRadioValue(bread);
-        getRadioValue(cheese);
-        getRadioValue(protein);
-        getRadioValue(sauce);
-        getRadioValue(type);
+        getRadioValue(bread, cheese, protein, sauce, type);
         score(itemsList);
         finalResult.innerHTML = getMaxScoreHouse();
         img.src = setGif();
