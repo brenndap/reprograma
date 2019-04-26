@@ -43,9 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
             for(key in houses){
                 if (houses[key].items.includes(itemsList[i])) {
                     houses[key].addScore();
-                    console.log(houses[key].name)
-                    console.log(houses[key].score)
-                    console.log(houses)
+                    
                 }
             }
             
@@ -64,7 +62,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
         for (let i = 0; i < houses.length; i++) {
             if (houses[i].score == maxScore) {
-                console.log(houses[i].name)
                 return houses[i].name;
                 
             }
@@ -86,7 +83,7 @@ window.addEventListener('DOMContentLoaded', function () {
         finalResult.innerHTML = getMaxScoreHouse();
         img.src = setGif();
         finalResult.append(img);
-        console.log(itemsList);
+        
     });
 });
 
