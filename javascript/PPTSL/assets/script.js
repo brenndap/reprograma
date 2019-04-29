@@ -6,7 +6,21 @@ window.addEventListener('DOMContentLoaded', function() {
     const submit = document.getElementById('submit');
     const result = document.getElementById('result');
     const user = document.getElementById('user-input');
-    const gameOptions = ["pedra", "papel", "tesoura", "lagarto", "spock"];
+    const symbolOptions = ["pedra", "papel", "tesoura", "lagarto", "spock"];
+
+    const symbols = [];
+    symbols["pedra"] = [];
+    symbols["pedra"]["wins"] = ["lagarto", "tesoura"];
+    symbols["papel"] = [];
+    symbols["papel"]["wins"] = ["pedra", "spock"];
+    symbols["tesoura"] = [];
+    symbols["tesoura"]["wins"] = ["papel", "lagarto"];
+    symbols["lagarto"] = [];
+    symbols["lagarto"]["wins"] = ["papel", "spock"];
+    symbols["spock"] = [];
+    symbols["spock"]["wins"] = ["pedra", "tesoura"];
+    
+
         
     submitName.addEventListener("click", function(){
         if(name.value){
@@ -18,44 +32,32 @@ window.addEventListener('DOMContentLoaded', function() {
     })
 
     submit.addEventListener("click", function(){
-        let computer = gameOptions[Math.floor(Math.random() * gameOptions.length)];
+        let computer = symbolOptions[Math.floor(Math.random() * symbolOptions.length)];
         let img = document.createElement("img");
-        const game = [];
-        game["pedra"] = []
-        game["pedra"]["wins"] = ["lagarto", "tesoura"];
-        game["pedra"]["loses"] = ["papel", "spock"];
-        game["papel"] = [];
-        game["papel"]["wins"] = ["pedra", "spock"];
-        game["papel"]["loses"] = ["lagarto", "tesoura"];
-        game["tesoura"] = [];
-        game["tesoura"]["wins"] = ["papel", "lagarto"];
-        game["tesoura"]["loses"] = ["pedra", "spock"];
-        game["lagarto"] = [];
-        game["lagarto"]["wins"] = ["papel", "spock"];
-        game["lagarto"]["loses"] = ["pedra", "tesoura"];
-        game["spock"] = [];
-        game["spock"]["wins"] = ["pedra", "tesoura"];
-        game["spock"]["loses"] = ["lagarto", "papel"];
-
+        console.log(computer);
+            
 
         if(computer == user.value){ //empate
             result.innerHTML = `Empate! Joque novamente! </br>`;
             img.src = "https://media.giphy.com/media/l4Ep4U19zwmUfWH72/giphy.gif";
             result.appendChild(img);
-           
-        } else if (game[computer]["wins"].includes(user.value)) { //usuário ganha
+            
+        } else if (symbols[computer]["wins"].includes(user.value)) { //user loses
             result.innerHTML = `${name.value} você perdeu! O computador escolheu ${computer} </br>`;
             img.src = "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif";
             result.appendChild(img);
 
-        } else { //usuário ganhou
+        } else { //user wins
             result.innerHTML = `${name.value} você ganhou! O computador escolheu ${computer} </br>`
             img.src = "https://media.giphy.com/media/DmzQ4iPMyUScw/giphy.gif";
             result.appendChild(img);
         }
+       
+        
+        
+        
     
     });
-
 });
 
 
