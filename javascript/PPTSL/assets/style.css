@@ -38,7 +38,7 @@ p {
 }
 
 .game {
-    display: none;
+    display: block;
     font-weight: bold;
     width: 37%;
     margin: 0 auto;

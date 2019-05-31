@@ -1,63 +1,80 @@
-window.addEventListener('DOMContentLoaded', function() {
-    const name = document.getElementById('name');
-    const submitName = document.getElementById('submit-name');
-    const userBox = document.getElementById('user-content');
-    const gameBox = document.getElementById('game-content');
-    const submit = document.getElementById('submit');
-    const result = document.getElementById('result');
+const name = document.getElementById('name');
+const submitName = document.getElementById('submit-name');
+const userBox = document.getElementById('user-content');
+const gameBox = document.getElementById('game-content');
+const submit = document.getElementById('submit');
+const result = document.getElementById('result');
+const symbols = [
+    {
+        name: "pedra",
+        wins: ["lagarto", "tesoura"],
+    },
+    {
+        name: "papel",
+        wins: ["pedra", "spock"]
+    },
+    {
+        name: "tesoura",
+        wins: ["papel", "lagarto"]
+    },
+    {
+        name: "lagarto",
+        wins: ["papel", "spock"]
+    },
+    {
+        name: "spock",
+        wins: ["pedra", "tesoura"]
+    }
+];
+
+function game() {
     const user = document.getElementById('user-input');
     const symbolOptions = ["pedra", "papel", "tesoura", "lagarto", "spock"];
-
-    const symbols = [];
-    symbols["pedra"] = [];
-    symbols["pedra"]["wins"] = ["lagarto", "tesoura"];
-    symbols["papel"] = [];
-    symbols["papel"]["wins"] = ["pedra", "spock"];
-    symbols["tesoura"] = [];
-    symbols["tesoura"]["wins"] = ["papel", "lagarto"];
-    symbols["lagarto"] = [];
-    symbols["lagarto"]["wins"] = ["papel", "spock"];
-    symbols["spock"] = [];
-    symbols["spock"]["wins"] = ["pedra", "tesoura"];
-    
-
-        
-    submitName.addEventListener("click", function(){
-        if(name.value){
-            gameBox.style.display = "block";
-            userBox.style.display = "none";
-        } else {
-            alert("Por favor, preencha seu nome! 😄")
-        }
-    })
-
-    submit.addEventListener("click", function(){
-        let computer = symbolOptions[Math.floor(Math.random() * symbolOptions.length)];
-        let img = document.createElement("img");
-        console.log(computer);
+    let computer = symbolOptions[Math.floor(Math.random() * symbolOptions.length)];
+    console.log(computer)
+    if (computer == user.value) { //empate
+        return `
             
-
-        if(computer == user.value){ //empate
-            result.innerHTML = `Empate! Joque novamente! </br>`;
-            img.src = "https://media.giphy.com/media/l4Ep4U19zwmUfWH72/giphy.gif";
-            result.appendChild(img);
+            <p>Empate! Joque novamente!</p>
+            <img src="https://media.giphy.com/media/l4Ep4U19zwmUfWH72/giphy.gif">
             
-        } else if (symbols[computer]["wins"].includes(user.value)) { //user loses
-            result.innerHTML = `${name.value} você perdeu! O computador escolheu ${computer} </br>`;
-            img.src = "https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif";
-            result.appendChild(img);
+        `
+    } else {
+        return symbols.map(symbol => {
+            if (computer == symbol.name) {
+                if (symbol.wins.includes(user.value)) {
+                    return `
+                        <p>você perdeu! O computador escolheu ${computer}</p>
+                        <img src="https://media.giphy.com/media/d2lcHJTG5Tscg/giphy.gif">
+                    `
+                } else {
+                    return `
+                        <p>você ganhou! O computador escolheu ${computer}</p>
+                        <img src="https://media.giphy.com/media/DmzQ4iPMyUScw/giphy.gif">
+                    
+                    `
+                }
+            }
+        }).join('');
+        
+    }
 
-        } else { //user wins
-            result.innerHTML = `${name.value} você ganhou! O computador escolheu ${computer} </br>`
-            img.src = "https://media.giphy.com/media/DmzQ4iPMyUScw/giphy.gif";
-            result.appendChild(img);
-        }
-       
-        
-        
-        
-    
-    });
+
+};
+
+
+
+window.addEventListener('keypress', function (event) {
+    if (event.key == "Enter") {
+        document.querySelector(".result").innerHTML = game()
+    };
 });
 
 
+
+window.addEventListener(onload, function () {
+    submit.addEventListener("click", function () {
+        document.querySelector(".result").innerHTML = game()
+    });
+
+});
