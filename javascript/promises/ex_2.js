@@ -5,12 +5,7 @@ function isAnOdd(number) {
 function isANumber(number) {
     return new Promise(
         function (resolve, reject) {
-            if (isNaN(number)) {
-                const error = new Error(`Deu ruim! ${number} não é um numero!`);
-                reject(error);
-            } else {
-                resolve(isAnOdd(number));
-            };
+            isNaN(number) ? reject(new Error(`Deu ruim! ${number} não é um numero!`)) : resolve(isAnOdd(number));
         }
     );
 };
