@@ -1,0 +1,46 @@
+.navbar {
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .navbar-content {
+        
+        width: 80%;
+        margin: 0 auto;
+        @include flex(center, space-between);
+    
+        h1 {
+            margin: 0 0 0 10px;;
+            font-size: 20px;
+            width: 87px;
+            color: $color-secondary;
+        }
+
+        .logo-container{
+            @include flex(center, center);
+            img {
+                width: 50px;
+            }
+        } 
+
+        .navbar-social-media ul {
+            @include flex(center, center);
+
+            li + li {
+                margin-left: 30px;
+
+            }
+
+            li a {
+                color: $color-secondary;
+            }
+            
+        }
+    }
+    
+
+    
+}
+

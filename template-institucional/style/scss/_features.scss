@@ -1,0 +1,31 @@
+.section-features {
+    width: 80%;
+    margin: 0 auto;
+    @include flex(center, space-around);
+    flex-direction: column;
+
+    .cards-container {
+        @include flex(center, space-between);
+        text-align: center;
+        width: 70%;
+        padding-top: 40px;
+        
+        .card {
+            width: 230px;
+              
+        }
+
+        .icon {
+            color: #2ab1ce;
+            font-size: 80px;
+        }
+
+        .text {
+            color: lighten($color-primary, 50%)
+        }
+    }
+    
+}
+
+
+

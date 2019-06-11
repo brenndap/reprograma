@@ -19,15 +19,19 @@ function verifyNumber(number) {
         .then(function (success) {
             resultado.innerHTML = "verificando...";
             setTimeout(() => { resultado.innerHTML = success }, 3000);
+            
         })
 
         .catch(function (error) {
             resultado.innerHTML = "verificando...";
             setTimeout(() => {  resultado.innerHTML = error.message }, 3000);
+            
         })
 };
 
 verifica.addEventListener('click', function () {
-    verifyNumber(userInput.value);
+
+    verifyNumber(userInput.value)
+    
 }); 
 

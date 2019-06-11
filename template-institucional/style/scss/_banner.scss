@@ -1,0 +1,56 @@
+.section-banner {
+    background-image: url("../assets/img/bg3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 85vh;
+
+    .banner-content {
+        height: 85vh;
+        overflow: hidden;
+        @include flex(flex-end, center);
+        width: 80%;
+        margin: 0 auto;
+        
+    }
+
+    .parallax-image {
+        width: 100%;
+        text-align: center;
+        
+
+        .image {
+            width: 385px;
+            margin-bottom: -190px;
+            
+        }
+    }
+
+    .banner-img{
+        width: 50%;
+    }
+
+    .banner-text {
+
+        width: 45%;
+        padding-bottom: 200px;
+
+        .title {
+            color: #fff;
+        }
+
+        h5{
+           color: $color-secondary;
+           font-size: $font-size-text;
+        }
+        
+        .btn-fill{
+            @include button(10px, 20px, $color-secondary, $color-bg);
+        }
+
+        .btn-simple {
+            @include button(10px, 20px, transparent, $color-secondary);
+            font-size: 20px;
+        }
+    }
+   
+}

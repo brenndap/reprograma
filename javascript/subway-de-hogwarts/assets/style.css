@@ -1,6 +1,9 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("./img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -26,9 +29,31 @@ h2, input {
 
 .input-container {
     text-align: left;
+    background-color: transparent;
+    
+    
+}
+
+.input-container fieldset {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.btn-container {
+    width: 100%;
 }
 
 .btn {
+    border: none;
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+
+
+.btn-submit {
     margin: 30px auto;
     font-weight: bold;
     background: rgb(7, 7, 7);
@@ -42,13 +67,13 @@ h2, input {
     transition: all 100ms ease;
 }
 
-.btn:active {
+.btn-submit:active {
     background:  rgb(228, 106, 49);
     cursor: pointer;
     border-bottom: solid 3px rgba(7, 7, 7, 0.835);
 }
     
-.btn:hover {
+.btn-submit:hover {
     background:  rgba(7, 7, 7, 0.835);
     cursor: pointer;
 }
@@ -66,7 +91,40 @@ h2, input {
 
 .result img {
     width: 100%;
+    max-width: 400px;
     margin-bottom: 40px;
 
+}
+
+.btn__image {
+    width: 200px;
+    height: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.btn:hover .overlay {
+    opacity: 1;
 }
 

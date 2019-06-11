@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <input id="input" type="password">
+
+    <p id="forca"></p>
+
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#input").keyup(function () {
+                let senha = $(this).val();
+                let forca = 0;
+
+                if (senha.length >= 4) {
+                    forca += 25
+
+                    let regNum = new RegExp(/[0-9]/i);
+                    let regChar = new RegExp(/[a-z]/i);
+                    let regCharE = new RegExp(/[^a-z0-9]/i);
+                    
+                    if (regNum.test(senha)) {
+                        forca += 25;
+                    } if (regChar.test(senha)) {
+                        forca += 25;
+                    } if (regCharE.test(senha)) {
+                        forca += 25;
+                    };
+                };
+
+                let aceito = "Não";
+
+                if (forca >= 75) {
+                    aceito = "Sim"
+                }
+
+                $("#forca").html(`Força: ${forca}  -  Senha: ${senha} - Aceito: ${aceito}`);
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>

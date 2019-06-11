@@ -39,6 +39,17 @@ function insertRows(list, attr) {
     return table
 }
 
+function insertFilter(list) {
+    let table = ""
+    list.forEach(item => {
+        table += `
+        <tr>
+            <td>${item}</td>
+        </tr>
+        `
+    });
+    return table
+}
 function showItems(array, title, item) {
     document.getElementById("table-head").innerHTML = insertTitle(array, title)
     document.getElementById("table-body").innerHTML = insertRows(array, item);
@@ -48,29 +59,52 @@ function showItems(array, title, item) {
     })
 }
 
+function search(input, list, attr, title) {
+   
+};
 
 const showAuthors = document.getElementById('autor');
 const showBooks = document.getElementById('livro');
 const showGen = document.getElementById('genero');
-
 document.getElementById('total').innerHTML += ` ${bookList.length}`
-
 // add autores 
 showAuthors.addEventListener('click', function () {
     showItems(bookList, "Autores", "autor")
-    
+    const userInput = document.getElementById(`input-search`);
+    userInput.addEventListener("keyup", function () {
+        // search(userInput.value, bookList, "autor", "Autores");
+        if (userInput.value) {
+            let filter = bookList.map(book => {
+                return book.autor
+            }).filter(book => {
+                if (book.toLowerCase().includes(userInput.value.toLowerCase())) {
+                    return book;
+                };
+            });
+            document.getElementById("table-body").innerHTML = insertFilter(filter);
+        } else {
+            showItems(bookList, "Autores", "autor");
+        };
+    });
 });
-
 // add livros
 showBooks.addEventListener("click", function () {
     showItems(bookList, "Livros", "livro")
-    
 });
-
 // add genero 
 showGen.addEventListener("click", function () {
     showItems(bookList, "Gênero", "genero")
-    
 });
 
+// const btnSearch = document.getElementById('btn-search');
+//     btnSearch.addEventListener('click', function () {
+//     let filter = bookList.map(book => {
+//         return book.autor
+//     }).filter(book => {
+//         if (userInput.value.toLowerCase() == book.toLowerCase()) {
+//             return book
+//         }
+//     })
+
+//     document.getElementById("table-body").innerHTML = insertFilter(filter);
 

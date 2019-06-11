@@ -1,0 +1,46 @@
+.footer {
+    @include flex(center, space-around);
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 0 80px 0;
+
+    .options ul {
+        @include flex(center, space-around);
+
+        li + li {
+            margin-left: 30px;
+
+        }
+
+        li a {
+            color: lighten($color-primary, 50%)
+        }
+    }
+
+    .copyright {
+        color: lighten($color-primary, 50%);
+        a {
+            color: lighten($color-primary, 50%);
+        }
+
+        
+    }
+
+    .social-media {
+        .btn-social {
+            font-size: 25px;
+        }
+
+        .btn-facebook {
+            color: #4267b2;
+        }
+
+        .btn-twitter {
+            color: #1c88cc;
+        }
+
+        .btn-pinterest {
+            color: #e60023;
+        }
+    }
+}

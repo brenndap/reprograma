@@ -1,0 +1,26 @@
+.section-presentation {
+    width: 80%;
+    margin: 0 auto;
+
+    @include flex(flex-start, space-around);
+    overflow: hidden;
+    margin-right: 0px;
+    padding-top: 70px;
+
+    .description{
+        width: 33%;
+        padding-top: 40px;
+
+        p{
+            font-size: $font-size-text;
+        }
+
+    }
+
+    .images {
+        width: 60%;
+    }
+
+
+    
+}

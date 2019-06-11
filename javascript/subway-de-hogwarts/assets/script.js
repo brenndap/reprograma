@@ -1,21 +1,34 @@
 window.addEventListener('DOMContentLoaded', function () {
-    class House {
-        constructor(name, items, score, gif) {
-            this.name = name;
-            this.items = items;
-            this.score = score;
-            this.gif = gif;
-        }
-        addScore() {
-            this.score += 1
-        }
-    }
     const houses = [
-        new House("Grifinória", ["frances", "suico", "rosbife", "mostarda", "tostado"], 0, 'https://media.giphy.com/media/40KXzKllSl6ve/giphy.gif'),
-        new House("Sonserina", ["italiano", "mussarela", "presunto", "maionese", "frio"], 0, 'https://media.giphy.com/media/4E1Yw7cA5DYwU/giphy.gif'),
-        new House("Lufa-Lufa", ["integral", "cheddar", "jaca", "barbecue", "tostado"], 0, 'https://media.giphy.com/media/1UAIoVWRhtjhe/giphy.gif'),
-        new House("Corvinal", ["granola", "vegano", "atum", "parmesao", "frio"], 0, 'https://media.giphy.com/media/BxYmEq7Ksqlbi/giphy.gif')
-    ]
+        {
+            name: "Grifinória",
+            items: ["frances", "suico", "rosbife", "mostarda", "tostado"],
+            score: 0,
+            gif: 'https://media.giphy.com/media/40KXzKllSl6ve/giphy.gif'
+        },
+
+        {
+            name: "Sonserina",
+            items: ["italiano", "mussarela", "presunto", "maionese", "frio"],
+            score: 0,
+            gif: 'https://media.giphy.com/media/4E1Yw7cA5DYwU/giphy.gif'
+        },
+
+        {
+            name: "Lufa-Lufa",
+            items: ["integral", "cheddar", "jaca", "barbecue", "tostado"],
+            score: 0,
+            gif: 'https://media.giphy.com/media/1UAIoVWRhtjhe/giphy.gif'
+        },
+
+        {
+            name: "Corvinal",
+            items: ["granola", "vegano", "atum", "parmesao", "frio"],
+            score: 0,
+            gif: 'https://media.giphy.com/media/BxYmEq7Ksqlbi/giphy.gif'
+        }
+
+    ];
 
     const submit = document.getElementById('submit');
     const bread = document.getElementsByName("bread");
@@ -24,67 +37,58 @@ window.addEventListener('DOMContentLoaded', function () {
     const sauce = document.getElementsByName("sauce");
     const type = document.getElementsByName('type');
     const finalResult = document.getElementById("result");
-    const img = document.createElement('img');
-    let itemsList = [];
-    
+    let userItemsList = [];
+
     function getRadioValue(radioGroup) {
-        for(let i = 0; i < arguments.length; i++){
-            for (let i = 0; i < radioGroup.length; i++) {
-                if (radioGroup[i].checked) {
-                    itemsList.push(radioGroup[i].value);
-                }
-            }
-        }
+        Array.from(radioGroup).map(group => {
+            if (group.checked) {
+                userItemsList.push(group.value);
+            };
+        });
     };
 
-    function score(itemsList) {
-
-        for (let i = 0; i < itemsList.length; i++) {
-            for(key in houses){
-                if (houses[key].items.includes(itemsList[i])) {
-                    houses[key].addScore();
-                    
-                }
-            }
-            
-        };
-
-
+    function score(userItemsList) {
+        userItemsList.map(item => {
+            houses.map(house => {
+                if (house.items.includes(item)) {
+                    house.score += 1;
+                };
+            });
+        });
     };
 
     function getMaxScoreHouse() {
-        let scoreList = [];
-        for (let i = 0; i < houses.length; i++) {
-            scoreList.push(houses[i].score);
-        }
+        let scoreList = houses.map(house => { return house.score });
+        let maxScore = scoreList.reduce(function (a, b) { return Math.max(a, b)});
         
-        let maxScore = scoreList.reduce(function (a, b) { return Math.max(a, b); });
-
-        for (let i = 0; i < houses.length; i++) {
-            if (houses[i].score == maxScore) {
-                return houses[i].name;
-                
-            }
+        for (key in houses) {
+            if (houses[key].score == maxScore) {
+                return houses[key].name;
+            };
         };
-        
     };
 
-    function setGif(){
-        for(let i = 0; i < houses.length; i++){
-            if(getMaxScoreHouse() == houses[i].name){
-                return houses[i].gif;
-            }
-        }
-    }
+    function setGif() {
+        return houses.map(house => {
+            if (getMaxScoreHouse() == house.name) {
+                return `<img src=${house.gif}>`
+                         
+            };
+        }).join('');
+
+    };
 
     submit.addEventListener("click", function () {
-        getRadioValue(bread, cheese, protein, sauce, type);
-        score(itemsList);
+        getRadioValue(bread)
+        getRadioValue(cheese)
+        getRadioValue(protein)
+        getRadioValue(sauce)
+        getRadioValue(type);
+        score(userItemsList);
         finalResult.innerHTML = getMaxScoreHouse();
-        img.src = setGif();
-        finalResult.append(img);
-        
+        finalResult.innerHTML += setGif();
+        userItemsList = []
+
     });
 });
-
 

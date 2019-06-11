@@ -1,0 +1,31 @@
+.section-clients {
+
+    background-color: #eeeeee;
+    height: 32vh;
+    padding: 70px 0;
+    width: 100%;
+    margin: 0 auto;
+
+    
+
+    text-align: center;
+
+    p {
+        font-size: $font-size-text;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        color: lighten($color-primary, 50%)
+    }
+    
+
+    .logos {
+        width: 70%;
+        margin: 0 auto;
+        .list-unstyled {
+            @include flex(center, space-around);
+            padding-top: 30px;
+        }
+    }
+
+}
