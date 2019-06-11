@@ -35,8 +35,6 @@ function sub() {
 
 setInterval(function () {
     const template =
-
-
         <div>
             <h1>Count: {count} </h1>
             <div>
