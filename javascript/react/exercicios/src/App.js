@@ -1,13 +1,22 @@
 import React from 'react';
+import Clima from './components/Clima'
+import Font from './components/Font'
+import BtnMostra from './components/BtnMostra'
 import './App.css';
-import Main from "./index.js"
 
-function App() {
-  return (
-    <div className="App">
-      <Main/>
-    </div>
-  );
+
+export default class App extends React.Component {
+  render() {
+      return (
+          <div>
+              <Clima />
+              <Font />
+              <BtnMostra />
+          </div>
+
+      )
+
+  }
 }
 
-export default App;
+

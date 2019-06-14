@@ -22,6 +22,7 @@ code {
   display: flex;
   max-width: 960px;
   margin: 50px auto;
+  text-align: left;
 }
 
 .comentario__perfil {
@@ -55,6 +56,8 @@ code {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  width: 32%;
+  margin: 0 auto;
 }
 
 .btn {
@@ -69,7 +72,7 @@ code {
   text-transform: uppercase;
 }
 
-.btn-change-container  {
+.btn-change-container {
   text-align: center;
 }
 
@@ -97,7 +100,6 @@ code {
   max-width: 560px;
   margin: 0 auto;
   padding-top: 20px;
-  
 }
 
 .previsao {
@@ -107,7 +109,6 @@ code {
   padding: 25px;
   max-width: 200px;
   text-align: center;
-  
 }
 
 .previsao__data {
@@ -132,5 +133,4 @@ code {
 
 .previsao-temperatura__linha td, .previsao-temperatura__linha th {
   padding-top: 15px;
-  
 }
