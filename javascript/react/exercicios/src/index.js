@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Previsao from './components/Previsão'
-// import * as serviceWorker from './serviceWorker';
-
-
 
 
 const dados = [
@@ -24,7 +21,7 @@ const dados = [
     }
 ]
 
-class Card extends React.Component {
+class Comentarios extends React.Component {
     render() {
         return dados.map(dado => {
             return (
@@ -43,7 +40,7 @@ class Card extends React.Component {
 }
 
 
-class Esconde extends React.Component {
+class Mostra extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -66,7 +63,7 @@ class Esconde extends React.Component {
         return (
             <div className="btn-change-container">
                 <button className="btn-change" onClick={this.mudarEstado}>{this.state.mudar ? "Fechar" : this.state.title}</button>
-                <div>{this.state.mudar ? < Card /> : ''}</div>
+                <div>{this.state.mudar ? < Comentarios /> : ''}</div>
             </div>
         )
     }
@@ -120,7 +117,7 @@ class Btn extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            count: 0,
+            count: 16,
         }
     }
 
@@ -161,7 +158,7 @@ export default class Main extends React.Component {
             <div>
                 <Clima />
                 <Btn />
-                <Esconde />
+                <Mostra />
             </div>
 
         )
