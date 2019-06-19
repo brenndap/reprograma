@@ -6,7 +6,7 @@ const FormSubmit = (props) => {
     let submitClass;
     console.log(props.formIsValid)
 
-    if (!props.formIsValid) {
+    if (props.formIsValid) {
         submitClass = 'botao'
         
     } else {

@@ -115,7 +115,7 @@ export default class PessoaFisica extends React.Component {
     }
 
     formSubmitHandler = (e) => {
-        console.log(this.state.formControls)
+        console.log(this.state)
         e.preventDefault()
 
     }
